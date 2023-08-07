@@ -1,4 +1,4 @@
-#include<Windows.h>
+//#include<Windows.h>//Not Necessary
 #include <stdlib.h>  
 #include<iostream>
 #include<conio.h>//getch
@@ -7,7 +7,7 @@
 using namespace std;
 string player1, player2;
 char x[3][3];
-int book[10] = {0,1,2,3,4,5,6,7,8,9};
+int book[10] = { 0,1,2,3,4,5,6,7,8,9 };
 void select(string& player1, string& player2);
 void style();
 void open()
@@ -19,16 +19,16 @@ void open()
     system("cls");
     select(player1, player2);
     cout << "\t [1] - Continue \n "
-         << "\t [2] - ReEnter Names \n"
-         << "Enter Your Answer : ";
+        << "\t [2] - ReEnter Names \n"
+        << "Enter Your Answer : ";
     int edit;
     cin >> edit;
     while (edit != 1)
     {
         select(player1, player2);
         cout << "\t [1] - Continue \n "
-             << "\t [2] - ReEnter Names \n"
-             << "Enter Your Answer : ";
+            << "\t [2] - ReEnter Names \n"
+            << "Enter Your Answer : ";
         cin >> edit;
     }
     if (edit == 1)
@@ -39,14 +39,14 @@ void open()
 void select(string& player1, string& player2)
 {
     cout << "\t\t~Entering Data~\n"
-         << "\t\t---------------\n\n";
+        << "\t\t---------------\n\n";
     cout << "Enter Player 1 Name : ";
     cin >> player1;
     cout << "Enter Player 2 Name : ";
     cin >> player2;
     cout << endl;
     cout << player1 << ",\t You Can =>" << " Sign With ~ X ~ Character \n"
-         << player2 << ",\t You Can =>" << " Sign With ~ O ~ Character \n";
+        << player2 << ",\t You Can =>" << " Sign With ~ O ~ Character \n";
     //
     //
     //system("cls");
@@ -133,13 +133,13 @@ void game()
             else
                 cout << player2 << " Enter The Possion : ";
             cin >> index;
-            if (index == 1 && book[1]==index)
+            if (index == 1 && book[1] == index)
             {
                 if (i % 2 == 0)
                     x[0][0] = 'X';
                 else
                     x[0][0] = 'O';
-                book[index]=0;
+                book[index] = 0;
             }
             else if (index == 2 && book[2])
             {
@@ -207,8 +207,8 @@ void game()
             }
             else
             {
-               // cout << "Enter Empty Possion : ";
-               // cin >> index;
+                // cout << "Enter Empty Possion : ";
+                // cin >> index;
                 i--;
             }
             system("cls");
@@ -274,10 +274,12 @@ int main()
         //style();
         game();
         cout << "[1]-Play Again\n"
-             << "[2]-CLose\n"
-             << "Enter The Answer : ";
+            << "[2]-CLose\n"
+            << "Enter The Answer : ";
         cin >> tru;
-    } 
-    while (tru == 1);
+    } while (tru == 1);
+    system("cls");
+    cout << "\n\t\t"<< "Thank You, See later ^_^"
+         << "\n\t\t--------------------------\n\n";
     return 0;
 }
