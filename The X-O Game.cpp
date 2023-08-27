@@ -132,9 +132,9 @@ void game()
     {
       style();
       if (i % 2 == 0)
-        cout << player1 << " Enter The Possion : ";
+        cout << player1 << ", Enter The Possion : ";
       else
-        cout << player2 << " Enter The Possion : ";
+        cout << player2 << ", Enter The Possion : ";
       cin >> index;
       if (index == 1 && book[1])
       {
@@ -274,7 +274,7 @@ void style()
 }
 int main()
 {
-  system("color 0F");
+  system("color 06");// 6
   int tru = 0;
   do
   {
